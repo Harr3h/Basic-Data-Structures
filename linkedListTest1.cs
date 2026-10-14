@@ -26,9 +26,9 @@ public class List
                     }
                 else
                     {
-                        Last.NodeNext=newnode;//sets the current node's next value from null to the newnode declared above
+                        Last.NodeNext=newnode;//sets the current node's value from null to the newnode declared above
                         newnode.NodePrevious=Last;
-                        Last=newnode;//sets the new node's prev value to the current node. 
+                        Last=newnode;//sets the new node's prev value to the current looped node. 
                     }
 
             }//end of NodeAddLast
@@ -44,7 +44,7 @@ public class List
                 }
                 else
                 {
-                    currentFirst.NodePrevious=newNode; //sets the newNode as the previous element of the original First node, making newNode the first item.
+                    currentFirst.NodePrevious=newNode; //initial first node to the previous value of newNode
                     newNode.NodeNext=currentFirst; //the newnode is the next item for the initial First list item.
                     First=newNode;//finally turns the First value into the newnode.
                 }
@@ -70,7 +70,7 @@ public class Program
         newlist.NodeAddLast(35);
         newlist.NodeAddLast(32);
         newlist.NodeAddFirst(2);
-        newlist.CountList();//calls the method from the newlist List defined above
+        newlist.CountList();//calls the method from the new list defined above
         
         Node? current = newlist.First; //calls the first list item from the List class
         while (current != null)//loops through the nodes changing the current node as it goes. 
