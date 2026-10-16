@@ -12,6 +12,7 @@ public class List
    public Node? Last{get; set;}
         public void NodeAddLast(int value)
             {
+               
                 Node? newnode=new Node(value);//creates a new node with the integer value the user added to the newnode node 
                 if (this.Last == null)
                     {
@@ -71,7 +72,8 @@ public class List
             }
                 if (rCurr.NodeNext.NodeNext == null)//handles the case when the current node's next next node is null
                 {
-                    rCurr=Last;//if the next next node is null, we can take the value null and give it to the .next node
+
+                    Last=rCurr;//if the next next node is null, we can take the value null and give it to the .next node
                     rCurr.NodeNext=null;//sets the next node's previous node to the current node (hopefully)
                 }
                 else
@@ -95,13 +97,13 @@ public class List
         {
             for (int i=0; i< index-1; i++)//creates a pseudo index and the search stops at the node before the user declared index value
             {
-                var oldcurrent=current;//saves old current value 
                 current=current.NodeNext;
-                current.NodePrevious=oldcurrent;//sets new current previous to old current
             }
            if (current.NodeNext == null){
-                
-                current=Last;
+                current.NodeNext=newnode;
+                newnode.NodePrevious=current;
+                newnode=Last;
+                newnode.NodeNext=null;
             }
             else
             {
