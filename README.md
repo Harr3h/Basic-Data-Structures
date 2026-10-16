@@ -1,5 +1,5 @@
 # Basic-Doubly-Linked-List
-Basic Linked List data structure for ICS4U
+Basic "Doubly Linked List" data structure done for the ICS4U class. 
 
 ## Features:
 
