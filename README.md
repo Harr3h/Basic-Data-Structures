@@ -1,7 +1,12 @@
-# Basic-Doubly-Linked-List
-Basic "Doubly Linked List" data structure done for the ICS4U class. 
+# Basic-Data-Structures
+Basic data structures done for the ICS4U class done natively in C#. 
+## Overview:
+Data structures included in this repository are:
+- Doubly Linked Lists
+- Stacks
+- Queues
 
-## Features:
+## List Features:
 
 ```csharp
     public void AddFirst(int value);
